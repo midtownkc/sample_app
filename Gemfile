@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.5'
+# ruby '2.3.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.0.0'
@@ -51,6 +51,8 @@ group :test do
   gem 'guard', '2.13.0'
 
   gem 'guard-minitest', '2.4.4'
+
+  gem 'minitest', '5.10.1'
 end
 
 group :production do
