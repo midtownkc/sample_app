@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <%= render 'layouts/head' %>
+
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  
+  <%= render 'layouts/rails_default' %>
+  <%= render 'layouts/shim' %>
+</head>
 
 
   <body>
