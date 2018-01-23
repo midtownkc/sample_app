@@ -15,15 +15,16 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", contact_path
     assert_select "a[href=?]", login_path
     assert_select "a[href=?]", users_path, false
-    assert_select 
 
     get contact_path
 
     assert_select "title", full_title("Contact")
 
+    # Test links for logged in user
     log_in_as(@user)
     get user_path @user
     assert_select "a[href=?]", users_path
     assert_select "a[href=?]", logout_path
+    assert_select "a[href=?]", edit_user_path
   end
 end
